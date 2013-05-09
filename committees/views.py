@@ -31,7 +31,7 @@ except:
 def detail(request, slug, template_name="committees/detail.html"):
     committee = get_object_or_404(Committee, slug=slug)
 
-    if has_perm(request.user, 'committee.view_committee', committee):
+    if has_perm(request.user, 'committees.view_committee', committee):
         EventLog.objects.log(instance=committee)
         officers = committee.officers()
 
@@ -81,7 +81,7 @@ def search(request, template_name="committees/search.html"):
 @login_required
 def add(request, form_class=CommitteeForm, meta_form_class=MetaForm, category_form_class=CategoryForm, template_name="committees/add.html"):
 
-    if not has_perm(request.user,'committee.add_committee'):
+    if not has_perm(request.user,'committees.add_committee'):
         raise Http403
     
     content_type = get_object_or_404(ContentType, app_label='committees',model='committee')
@@ -166,7 +166,7 @@ def edit(request, id, form_class=CommitteeForm, meta_form_class=MetaForm, catego
         
     committee = get_object_or_404(Committee, pk=id)
     
-    if not has_perm(request.user,'committee.change_committee',committee):
+    if not has_perm(request.user,'committees.change_committee',committee):
         raise Http403
         
     content_type = get_object_or_404(ContentType, app_label='committees',model='committee')
@@ -267,7 +267,7 @@ def edit_meta(request, id, form_class=MetaForm, template_name="committees/edit-m
 
     # check permission
     committee = get_object_or_404(Committee, pk=id)
-    if not has_perm(request.user, 'committee.change_committee', committee):
+    if not has_perm(request.user, 'committees.change_committee', committee):
         raise Http403
 
     EventLog.objects.log(instance=committee)
@@ -300,7 +300,7 @@ def edit_meta(request, id, form_class=MetaForm, template_name="committees/edit-m
 def delete(request, id, template_name="committees/delete.html"):
     committee = get_object_or_404(Committee, pk=id)
 
-    if not has_perm(request.user, 'committee.delete_committee'):
+    if not has_perm(request.user, 'committees.delete_committee'):
         raise Http403
 
     if request.method == "POST":
