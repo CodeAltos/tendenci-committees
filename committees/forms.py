@@ -39,7 +39,6 @@ class CommitteeForm(TendenciBaseForm):
         'tags',
         'allow_anonymous_view',
         'syndicate',
-        'status',
         'status_detail',
         )
         fieldsets = [('Committee Information', {
@@ -66,7 +65,6 @@ class CommitteeForm(TendenciBaseForm):
                       }),
                      ('Administrator Only', {
                       'fields': ['syndicate',
-                                 'status',
                                  'status_detail'], 
                       'classes': ['admin-only'],
                     })]
@@ -120,7 +118,6 @@ class CommitteeAdminForm(TendenciBaseForm):
         'tags',
         'allow_anonymous_view',
         'syndicate',
-        'status',
         'status_detail',
         )
         
