@@ -23,11 +23,11 @@ msgstr ""
 
 #: templates/committees/add.html:20
 msgid "Add"
-msgstr ""
+msgstr "Add"
 
 #: templates/committees/add.html:28 templates/committees/edit.html:27
 msgid "Category"
-msgstr ""
+msgstr "Category"
 
 #: templates/committees/add.html:34 templates/committees/edit.html:33
 msgid "SEO Meta"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: templates/committees/delete.html:25
 msgid "Confirm Delete"
-msgstr ""
+msgstr "Confirm Delete"
 
 #: templates/committees/delete.html:28
 msgid "Back to committee"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: templates/committees/delete.html:29
 msgid "Back to all"
-msgstr ""
+msgstr "Back to all"
 
 #: templates/committees/detail.html:10
 msgid "COMMITTEE"
@@ -67,11 +67,11 @@ msgstr ""
 
 #: templates/committees/edit-meta.html:30
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel"
 
 #: templates/committees/edit.html:19 templates/committees/options.html:15
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 #: templates/committees/edit.html:39
 msgid "Save Committee Changes"
@@ -79,44 +79,44 @@ msgstr ""
 
 #: templates/committees/edit.html:42
 msgid "Link to delete confirmation page"
-msgstr ""
+msgstr "Link to delete confirmation page"
 
 #: templates/committees/edit.html:43 templates/committees/options.html:28
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: templates/committees/meta.html:17
 msgid "Category:"
-msgstr ""
+msgstr "Category:"
 
 #: templates/committees/meta.html:19
 msgid "Sub Category:"
-msgstr ""
+msgstr "Sub Category:"
 
 #: templates/committees/meta.html:85 templates/committees/nav.html:63
 #: templates/committees/options.html:24
 msgid "Edit Meta"
-msgstr ""
+msgstr "Edit Meta"
 
 #: templates/committees/meta.html:86 templates/committees/nav.html:64
 msgid "Edit Categories"
-msgstr ""
+msgstr "Edit Categories"
 
 #: templates/committees/nav.html:23
 msgid "Tendenci"
-msgstr ""
+msgstr "Tendenci"
 
 #: templates/committees/nav.html:25
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashboard"
 
 #: templates/committees/nav.html:26
 msgid "My Profile"
-msgstr ""
+msgstr "My Profile"
 
 #: templates/committees/nav.html:27
 msgid "Log Off"
-msgstr ""
+msgstr "Log Off"
 
 #: templates/committees/nav.html:36
 msgid "All Committees"
@@ -124,7 +124,7 @@ msgstr ""
 
 #: templates/committees/nav.html:43
 msgid "Settings"
-msgstr ""
+msgstr "Settings"
 
 #: templates/committees/nav.html:45
 msgid "Search Committees"
