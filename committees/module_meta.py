@@ -1,21 +1,21 @@
 from django.utils.html import strip_tags
 from django.utils.text import unescape_entities
-from tendenci.core.meta.utils import generate_meta_keywords
-from tendenci.core.site_settings.utils import get_setting
-from django.utils.text import truncate_words
+from tendenci.apps.meta.utils import generate_meta_keywords
+from tendenci.apps.site_settings.utils import get_setting
+from tendenci.apps.base.utils import truncate_words
 
-from tendenci.core.categories.models import Category
+from tendenci.apps.categories.models import Category
 
 class CommitteeMeta():
 
     def get_title(self):
         object = self.object
 
-        ### Assign variables -----------------------  
+        ### Assign variables -----------------------
         geo_location = get_setting('site','global','sitegeographiclocation')
         category = Category.objects.get_for_object(object, 'category')
         subcategory = Category.objects.get_for_object(object, 'subcategory')
-        
+
         # start w/ title
         value = '%s' % object.title
         value = value.strip()
@@ -26,7 +26,7 @@ class CommitteeMeta():
             value = '%s : %s' % (value, subcategory)
 
         value = value.strip()
-        
+
         if geo_location:
             value = '%s | %s | ' % (value, geo_location)
 
@@ -35,12 +35,12 @@ class CommitteeMeta():
     def get_description(self):
         object = self.object
 
-        ### Assign variables -----------------------  
+        ### Assign variables -----------------------
         category = Category.objects.get_for_object(object, 'category')
         subcategory = Category.objects.get_for_object(object, 'subcategory')
         site_name = get_setting('site','global','sitedisplayname')
         geo_location = get_setting('site','global','sitegeographiclocation')
-       
+
         content = object.content
 
         content = strip_tags(content) #strips HTML tags
@@ -73,7 +73,7 @@ class CommitteeMeta():
     def get_keywords(self):
         object = self.object
 
-        ### Assign variables -----------------------  
+        ### Assign variables -----------------------
         dynamic_keywords = generate_meta_keywords(object.content)
         primary_keywords = get_setting('site','global','siteprimarykeywords')
         secondary_keywords = get_setting('site','global','sitesecondarykeywords')
@@ -98,7 +98,7 @@ class CommitteeMeta():
             for item in list:
                 if not item.strip():
                     list.remove(item)
- 
+
             value = '%s %s, %s' % (value, ', '.join(list), dynamic_keywords)
 
         else:
@@ -134,5 +134,5 @@ class CommitteeMeta():
             if object.meta and object.meta.canonical_url: return object.meta.canonical_url
             else: return self.get_canonical_url()
         return ''
-    
-    
+
+

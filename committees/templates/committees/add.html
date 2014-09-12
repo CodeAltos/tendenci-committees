@@ -20,7 +20,7 @@
     <h1>{% firstof MODULE_COMMITTEES_LABEL trans 'Committee' %} {% trans "Add" %}</h1>
 
     <div class="committee-wrap">
-    	<form action="{% url committees.add %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+    	<form action="{% url "committees.add" %}" method="post" enctype="multipart/form-data">{% csrf_token %}
     	<div class="forms">			
     	    {% committee_form form %}
 			

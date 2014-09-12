@@ -5,7 +5,7 @@ from django.contrib.contenttypes import generic
 
 from tinymce import models as tinymce_models
 from tendenci.apps.pages.models import BasePage
-from tendenci.core.perms.object_perms import ObjectPermission
+from tendenci.apps.perms.object_perms import ObjectPermission
 from committees.managers import CommitteeManager
 from committees.module_meta import CommitteeMeta
 from tendenci.apps.user_groups.models import Group

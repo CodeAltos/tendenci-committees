@@ -1,7 +1,7 @@
 from django.template import Node, Library, TemplateSyntaxError, Variable
 
 from committees.models import Committee
-from tendenci.core.base.template_tags import ListNode, parse_tag_kwargs
+from tendenci.apps.base.template_tags import ListNode, parse_tag_kwargs
 
 register = Library()
 
