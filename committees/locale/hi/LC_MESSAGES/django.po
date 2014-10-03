@@ -8,30 +8,30 @@ msgstr ""
 "Project-Id-Version: Tendenci\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-07-24 23:01+0000\n"
-"PO-Revision-Date: 2014-07-22 17:20+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Chinese (China) (http://www.transifex.com/projects/p/tendenci/language/zh_CN/)\n"
+"PO-Revision-Date: 2014-10-02 23:38+0000\n"
+"Last-Translator: bleven <bleven@tendenci.com>\n"
+"Language-Team: Hindi (http://www.transifex.com/projects/p/tendenci/language/hi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: hi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: models.py:55
 msgid "title"
-msgstr "标题"
+msgstr ""
 
 #: templates/committees/add.html:20
 msgid "Add"
-msgstr "增添"
+msgstr ""
 
 #: templates/committees/add.html:28 templates/committees/edit.html:27
 msgid "Category"
-msgstr "分类"
+msgstr ""
 
 #: templates/committees/add.html:34 templates/committees/edit.html:33
 msgid "SEO Meta"
-msgstr "元搜索引擎优化"
+msgstr ""
 
 #: templates/committees/delete.html:5 templates/committees/nav.html:68
 msgid "Delete Committee"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: templates/committees/delete.html:25
 msgid "Confirm Delete"
-msgstr "确认删除"
+msgstr ""
 
 #: templates/committees/delete.html:28
 msgid "Back to committee"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: templates/committees/delete.html:29
 msgid "Back to all"
-msgstr "全部返回"
+msgstr ""
 
 #: templates/committees/detail.html:10
 msgid "COMMITTEE"
@@ -63,15 +63,15 @@ msgstr ""
 
 #: templates/committees/edit-meta.html:16
 msgid "Meta Information for"
-msgstr "对于元信息"
+msgstr ""
 
 #: templates/committees/edit-meta.html:30
 msgid "Cancel"
-msgstr "取消"
+msgstr ""
 
 #: templates/committees/edit.html:19 templates/committees/options.html:15
 msgid "Edit"
-msgstr "编辑"
+msgstr ""
 
 #: templates/committees/edit.html:39
 msgid "Save Committee Changes"
@@ -79,44 +79,44 @@ msgstr ""
 
 #: templates/committees/edit.html:42
 msgid "Link to delete confirmation page"
-msgstr "链接到删除确认页面"
+msgstr ""
 
 #: templates/committees/edit.html:43 templates/committees/options.html:28
 msgid "Delete"
-msgstr "删除"
+msgstr ""
 
 #: templates/committees/meta.html:17
 msgid "Category:"
-msgstr "类别"
+msgstr ""
 
 #: templates/committees/meta.html:19
 msgid "Sub Category:"
-msgstr "子类别"
+msgstr ""
 
 #: templates/committees/meta.html:85 templates/committees/nav.html:63
 #: templates/committees/options.html:24
 msgid "Edit Meta"
-msgstr "编辑Meta信息"
+msgstr ""
 
 #: templates/committees/meta.html:86 templates/committees/nav.html:64
 msgid "Edit Categories"
-msgstr "编辑类别"
+msgstr ""
 
 #: templates/committees/nav.html:23
 msgid "Tendenci"
-msgstr "Tendenci"
+msgstr ""
 
 #: templates/committees/nav.html:25
 msgid "Dashboard"
-msgstr "操控页"
+msgstr ""
 
 #: templates/committees/nav.html:26
 msgid "My Profile"
-msgstr "我的个人资料"
+msgstr ""
 
 #: templates/committees/nav.html:27
 msgid "Log Off"
-msgstr "注销"
+msgstr ""
 
 #: templates/committees/nav.html:36
 msgid "All Committees"
@@ -124,7 +124,7 @@ msgstr ""
 
 #: templates/committees/nav.html:43
 msgid "Settings"
-msgstr "设置"
+msgstr ""
 
 #: templates/committees/nav.html:45
 msgid "Search Committees"
@@ -136,7 +136,7 @@ msgstr ""
 
 #: templates/committees/nav.html:50
 msgid "Add Position"
-msgstr "新增职位"
+msgstr ""
 
 #: templates/committees/nav.html:56
 msgid "This Committee"
@@ -152,11 +152,11 @@ msgstr ""
 
 #: templates/committees/nav.html:76
 msgid "Files"
-msgstr "文件"
+msgstr ""
 
 #: templates/committees/options.html:20
 msgid "More options"
-msgstr "更多选择"
+msgstr ""
 
 #: templates/committees/search.html:10
 msgid "Committees"
