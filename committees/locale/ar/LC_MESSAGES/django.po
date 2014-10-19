@@ -19,19 +19,19 @@ msgstr ""
 
 #: models.py:55
 msgid "title"
-msgstr ""
+msgstr "عنوان"
 
 #: templates/committees/add.html:20
 msgid "Add"
-msgstr ""
+msgstr "إضافة"
 
 #: templates/committees/add.html:28 templates/committees/edit.html:27
 msgid "Category"
-msgstr ""
+msgstr "فئة"
 
 #: templates/committees/add.html:34 templates/committees/edit.html:33
 msgid "SEO Meta"
-msgstr ""
+msgstr "SEO ميتا"
 
 #: templates/committees/delete.html:5 templates/committees/nav.html:68
 msgid "Delete Committee"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: templates/committees/delete.html:25
 msgid "Confirm Delete"
-msgstr ""
+msgstr "تأكيد حذف"
 
 #: templates/committees/delete.html:28
 msgid "Back to committee"
@@ -55,7 +55,7 @@ msgstr ""
 
 #: templates/committees/delete.html:29
 msgid "Back to all"
-msgstr ""
+msgstr "العودة الى جميع"
 
 #: templates/committees/detail.html:10
 msgid "COMMITTEE"
@@ -63,15 +63,15 @@ msgstr ""
 
 #: templates/committees/edit-meta.html:16
 msgid "Meta Information for"
-msgstr ""
+msgstr "معلومات الوصفية ل"
 
 #: templates/committees/edit-meta.html:30
 msgid "Cancel"
-msgstr ""
+msgstr "إلغاء"
 
 #: templates/committees/edit.html:19 templates/committees/options.html:15
 msgid "Edit"
-msgstr ""
+msgstr "تحرير"
 
 #: templates/committees/edit.html:39
 msgid "Save Committee Changes"
@@ -79,44 +79,44 @@ msgstr ""
 
 #: templates/committees/edit.html:42
 msgid "Link to delete confirmation page"
-msgstr ""
+msgstr "تصل إلى حذف صفحة تأكيد"
 
 #: templates/committees/edit.html:43 templates/committees/options.html:28
 msgid "Delete"
-msgstr ""
+msgstr "حذف"
 
 #: templates/committees/meta.html:17
 msgid "Category:"
-msgstr ""
+msgstr "الفئة:"
 
 #: templates/committees/meta.html:19
 msgid "Sub Category:"
-msgstr ""
+msgstr "الفئة الفرعية:"
 
 #: templates/committees/meta.html:85 templates/committees/nav.html:63
 #: templates/committees/options.html:24
 msgid "Edit Meta"
-msgstr ""
+msgstr "تحرير ميتا"
 
 #: templates/committees/meta.html:86 templates/committees/nav.html:64
 msgid "Edit Categories"
-msgstr ""
+msgstr "تحرير الفئات"
 
 #: templates/committees/nav.html:23
 msgid "Tendenci"
-msgstr ""
+msgstr "الميل"
 
 #: templates/committees/nav.html:25
 msgid "Dashboard"
-msgstr ""
+msgstr "لوحة القيادة"
 
 #: templates/committees/nav.html:26
 msgid "My Profile"
-msgstr ""
+msgstr "ملفي الشخصي"
 
 #: templates/committees/nav.html:27
 msgid "Log Off"
-msgstr ""
+msgstr "تسجيل الخروج"
 
 #: templates/committees/nav.html:36
 msgid "All Committees"
@@ -124,7 +124,7 @@ msgstr ""
 
 #: templates/committees/nav.html:43
 msgid "Settings"
-msgstr ""
+msgstr "إعدادات"
 
 #: templates/committees/nav.html:45
 msgid "Search Committees"
@@ -152,11 +152,11 @@ msgstr ""
 
 #: templates/committees/nav.html:76
 msgid "Files"
-msgstr ""
+msgstr "ملفات"
 
 #: templates/committees/options.html:20
 msgid "More options"
-msgstr ""
+msgstr "خيارات أكثر"
 
 #: templates/committees/search.html:10
 msgid "Committees"
