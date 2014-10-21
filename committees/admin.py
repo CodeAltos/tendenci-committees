@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.contrib.contenttypes.models import ContentType
+from django.contrib.auth.models import User
 from django.conf import settings
 from django import forms
 from django.core.urlresolvers import reverse
@@ -8,7 +9,7 @@ from tendenci.core.perms.admin import TendenciBaseModelAdmin
 from tendenci.core.perms.utils import update_perms_and_save
 from tendenci.apps.user_groups.models import GroupMembership
 from committees.models import Committee, Position, Officer
-from committees.forms import CommitteeAdminForm, CommitteeAdminChangelistForm
+from committees.forms import CommitteeAdminForm, CommitteeAdminChangelistForm, UserModelChoiceField
 
 
 class OfficerAdminInline(admin.TabularInline):
@@ -31,22 +32,8 @@ class OfficerAdminInline(admin.TabularInline):
             committee = self.get_object(kwargs['request'], Committee)
             if committee:
                 committee_group = committee.group
-                group_members = GroupMembership.objects.filter(group=committee_group).select_related()
-            choices = [('', '---------')]
-            for m in group_members:
-                u = m.member
-                label = ''
-                if u.first_name and u.last_name:
-                    label = u.first_name + ' ' + u.last_name
-                elif u.username:
-                    label = u.username
-                elif u.email:
-                    label = u.email
-                if len(label) > 23:
-                    label = label[0:20] + '...'
-                choices.append((u.pk, label))
-
-            return forms.ChoiceField(choices=choices, label="User")
+                return UserModelChoiceField(queryset=User.objects.filter(group_member__group=committee.group), label="User")
+            return UserModelChoiceField(queryset=User.objects.none(), label="User")
         return super(OfficerAdminInline, self).formfield_for_dbfield(field, **kwargs)
 
     def get_object(self, request, model):
@@ -89,12 +76,12 @@ class CommitteeAdmin(TendenciBaseModelAdmin):
     prepopulated_fields = {'slug': ['title']}
     form = CommitteeAdminForm
     inlines = (OfficerAdminInline,)
-    
+
     class Media:
         js = (
             '%sjs/global/tinymce.event_handlers.js' % settings.STATIC_URL,
         )
-        
+
     def get_form(self, request, obj=None, **kwargs):
         """
         inject the user in the form.
@@ -118,7 +105,7 @@ class CommitteeAdmin(TendenciBaseModelAdmin):
         instance = form.save(commit=False)
         perms = update_perms_and_save(request, form, instance)
         return instance
-        
+
     def save_formset(self, request, form, formset, change):
         """
         Associate the user to each instance saved.
@@ -129,8 +116,8 @@ class CommitteeAdmin(TendenciBaseModelAdmin):
             instance.object_id = instance.committee.pk
             instance.creator = request.user
             instance.owner = request.user
-            instance.save(log=False)
-        
+            instance.save()
+
     def link(self, obj):
         return '<a href="%s" title="%s">%s</a>' % (
             obj.get_absolute_url(),
@@ -138,7 +125,7 @@ class CommitteeAdmin(TendenciBaseModelAdmin):
             obj.slug
         )
     link.allow_tags = True
-    
+
     def edit_link(self, obj):
         link = '<a href="%s" title="edit">Edit</a>' % reverse('admin:committees_committee_change', args=[obj.pk])
         return link
