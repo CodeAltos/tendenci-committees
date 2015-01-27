@@ -18,6 +18,16 @@ def committee_nav(context, user, committee=None):
     })
     return context
 
+
+@register.inclusion_tag("committees/top_nav_items.html", takes_context=True)
+def committee_current_app(context, user, committee=None):
+    context.update({
+        "app_object": committee,
+        "user": user
+    })
+    return context
+
+
 @register.tag
 def list_committees(parser, token):
     """
