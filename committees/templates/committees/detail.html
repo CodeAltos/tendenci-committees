@@ -4,20 +4,19 @@
 
 {% block body %}
 <div class="t">
-    {% committee_nav request.user committee %}
     <div class="committee-wrap">
         <div class="committee-title">
             {% trans 'COMMITTEE' %} {{ committee.title }}
         </div>
-        
+
         <div class="committee-mission">
             {{ committee.mission|safe }}
         </div>
-        
+
         <div class="committee-content">
             {{ committee.content|safe }}
         </div>
-        
+
         <div class="committee-officers">
             <div class="label">
                 <label for="officer-table">OFFICERS</label>
@@ -30,12 +29,12 @@
                         <th class="officer-phone">Phone</th>
 			        </tr>
 			    </thead>
-			    
+
 			    <tbody>
 			        {% for officer in officers %}
 			        <tr>
 			            <td class="officer-position">{{ officer.position }}</td>
-			            
+
 			            <td class="officer-name">
 			                <a href="{{ officer.user.get_profile.get_absolute_url }}">
 			                    {% if officer.user.get_full_name %}
@@ -45,20 +44,20 @@
                                 {% endif %}
 			                </a>
 			            </td>
-			            
+
 			            <td class="officer-phone">{{ officer.phone }}</td>
 			        </tr>
 			        {% endfor %}
 			    </tbody>
 			</table>
         </div>
-        
+
         {% if admin %}
         <div class="committee-notes">
             {{ committee.notes|safe }}
         </div>
         {% endif %}
-        
+
         <div class="committee-files">
             Files {% if admin %}<a href="{% url "file.add" %}">Add a File</a>{% endif %}
             <ul class="file-list">
@@ -69,10 +68,10 @@
             {% endfor %}
             </ul>
         </div>
-        
-        
-        
-        {% include "committees/meta.html" %} 
+
+
+
+        {% include "committees/meta.html" %}
     </div>
 </div>
 {% endblock body %}

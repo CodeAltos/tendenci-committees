@@ -12,7 +12,6 @@
 
 {% block body %}
 <div class="t">
-    {% committee_nav request.user committee %}
     <h1>{% firstof MODULE_COMMITTEES_LABEL 'COMMITTEE' %} {% trans "Meta Information for" %}<br />
     {{ committee.title }}</h1>
 

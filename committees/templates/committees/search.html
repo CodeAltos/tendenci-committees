@@ -13,11 +13,10 @@
 {% block body %}
 {% autopaginate committees 10 %}
 <div class="t">
-    {% committee_nav request.user %}
     <h1>{% trans 'Committee List' %}</h1>
-    
+
     {% committee_search %}
-    
+
     <div class="committees-wrap clearfix">
     {% for committee in committees %}
         {% search_result committee %}
