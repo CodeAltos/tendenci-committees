@@ -10,7 +10,7 @@
     <link rel="alternate" type="application/rss+xml" title="{% trans 'Committees' %}" href="{% url "committees.feed" %}" />
 {% endblock %}
 
-{% block body %}
+{% block content %}
 {% autopaginate committees 10 %}
 <div class="t">
     <h1>{% trans 'Committee List' %}</h1>
@@ -26,4 +26,4 @@
     </div>
     {% paginate %}
 </div>
-{% endblock body %}
+{% endblock %}

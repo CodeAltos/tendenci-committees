@@ -4,6 +4,7 @@
 .DS_Store
 committees/.DS_Store
 
+.*
 # except for .gitignore
 !.gitignore
 # except for .tx
