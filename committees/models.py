@@ -34,6 +34,7 @@ class Committee(BasePage):
 
     class Meta:
         permissions = (("view_committee", "Can view committee"),)
+        app_label = 'committees'
 
     @models.permalink
     def get_absolute_url(self):
@@ -54,6 +55,9 @@ class Committee(BasePage):
 class Position(models.Model):
     title = models.CharField(_(u'title'), max_length=200)
 
+    class Meta:
+        app_label = 'committees'
+
     def __unicode__(self):
         return unicode(self.title)
 
@@ -63,6 +67,9 @@ class Officer(models.Model):
     user = models.ForeignKey(User,  related_name="%(app_label)s_%(class)s_user")
     position = models.ForeignKey(Position)
     phone = models.CharField(max_length=50, null=True, blank=True)
+
+    class Meta:
+        app_label = 'committees'
 
     def __unicode__(self):
         return "%s" % self.pk
